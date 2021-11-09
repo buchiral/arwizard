@@ -1,0 +1,60 @@
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ar_poi`
+--
+
+CREATE TABLE IF NOT EXISTS `ar_poi` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) NOT NULL,
+  `description` TEXT NOT NULL,
+  `latitude` DECIMAL( 18, 5 ) NULL,
+  `longitude` DECIMAL( 18, 5 ) NULL,
+  `altitude` DECIMAL( 11, 8 ) NULL,
+  `poi_info` LONGTEXT NOT NULL,
+  `credat` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `ar_szenario_fkid` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+);
+
+
+--
+-- Dumping data for table `ar_poi`
+--
+
+INSERT INTO `ar_poi` (`id`, `name`, `description`, `latitude`, `longitude`, `altitude`, `credat`, `ar_szenario_fkid`, `poi_info`) VALUES
+(40, 'Hochschule Winterthur ZHAW', 'Die ZHAW ist eine der fuehrenden Schweizer Hochschulen fur Angewandte Wissenschaften. An drei Standorten arbeiten wir anwendungsorientiert.', '47.497277000000000', '8.729352000000063', '444.38409424', '2015-05-17 16:12:41', 38, '{"icon_poi":"ion-university","video_url":"https://www.youtube.com/embed/6tJMUjLqSyE","img_url":"","audio_url":"","audio_autoplay":"false"}'),
+(43, 'Horgen', '', '47.257065399999990', '8.596905999999990', '458.02981567', '2015-05-18 13:46:13', 38, '{"icon_poi":"","video_url":"","img_url":"","audio_url":"","audio_autoplay":"false"}'),
+(44, 'Paradeplatz', '', '47.369717000000000', '8.538923000000068', '409.18798828', '2015-05-18 13:46:29', 38, '{"icon_poi":"","video_url":"","img_url":"","audio_url":"","audio_autoplay":"false"}'),
+(45, 'Uto Kulm', '', '47.349531900000000', '8.491781199999991', '867.52575684', '2015-05-18 13:48:25', 38, '{"icon_poi":"","video_url":"","img_url":"http://www.wandersite.ch/Tageswanderung/650_utokulm_aussichtsturm.jpg","audio_url":"","audio_autoplay":"false"}')
+;
+
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ar_szenario`
+--
+
+CREATE TABLE IF NOT EXISTS `ar_szenario` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) NOT NULL,
+  `description` TEXT NOT NULL,
+  `config` LONGTEXT NOT NULL,
+  `credat` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `extern_poi_url` LONGTEXT NOT NULL,
+  PRIMARY KEY (`id`)
+);
+
+
+
+--
+-- Dumping data for table `ar_poi`
+--
+INSERT INTO `ar_szenario` (`id`, `name`, `description`, `config`, `credat`, `extern_poi_url`) VALUES
+(38, 'Stadtplan', 'Dieses AR-Szenario beschreibt eine AR-Anwendung. ', '{"navigation_type":"all","radar_option":"show","radar_position":"topleft","radar_radius":"43","radar_circle_bg_color":"rgba(220,253,220,1)","radar_circle_border_color":"rgba(131,200,252,1)","radar_circle_border_width":"6","radar_circle_opacity":"0.4","radar_fieldview_bg_color":"rgba(64,91,111,1)","radar_fieldview_border_color":"rgba(220,253,220,1)","radar_fieldview_border_width":"6","radar_fieldview_opacity":"0.6","radar_needle_bg_color":"rgba(220,253,220,1)","radar_needle_border_color":"rgba(220,253,220,1)","radar_needle_border_width":"5","box_text_color":"rgba(224,17,25,1)","box_bg_color":"rgba(220,253,220,1)","box_opacity":"0.9","box_border_color":"rgba(224,17,25,1)","box_border_width":"7","box_border_round_all":"13","box_border_round_topleft":"13","box_border_round_topright":"13","box_border_round_bottomleft":"13","box_border_round_bottomright":"13","radius_option":"enable","mapmodus":"enable","listmodus":"enable","pause_function":"enable"}', '2015-05-17 14:06:08', '[]');
+
+

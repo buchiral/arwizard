@@ -1,0 +1,11 @@
+Install
+
+1) Files
+- create new app folder "XXX" (e.g. xampp/htdocs/XXX) and insert all files from zip
+
+2) DB
+- create db using phpmyadmin together with a user
+- execute sql statements in db/create_DB_SQL.txt
+- set db name, user and password in config.php file
+
+3) Have fun!

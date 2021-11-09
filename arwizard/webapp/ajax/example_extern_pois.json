@@ -1,0 +1,30 @@
+[{
+"name":    		"Paradeplatz Zurich",
+"description":	"Der Paradeplatz liegt in Zurich. Die Geschichte…",
+"latitude":		"47.369717",
+"longitude":	"8.538923000000068",
+"altitude":		"500",
+"poi_info":
+			{	"icon_poi": 	"fa fa-anchor",
+			 	"video_url": 	"http:\/\/www.youtube.com\/embed\/XsaRuCIrzjs",
+			 	"img_url":		"",
+			 	"audio_url":	"",
+			 	"audio_autoplay":	"false"}
+			 	
+}
+,
+{
+"name":			"Weiterer Sitz",
+"description":	"Der Paradeplatz liegt in Zurich. Die Geschichte…",
+"latitude":		"47.349717",
+"longitude":	"8.538923000000068",
+"altitude":		"500",
+"poi_info":
+			{	"icon_poi": 	"fa fa-anchor",
+			 	"video_url": 	"http:\/\/www.youtube.com\/embed\/XsaRuCIrzjs",
+			 	"img_url":		"",
+			 	"audio_url":	"",
+			 	"audio_autoplay":	"false"}
+			 	
+}
+]
